@@ -9,3 +9,5 @@ A rough list of ideas likely to be implemented in the future. Nothing on here is
 - Show stock charts for the market information
 - Ability to click on a stock on the main list to either redirect to a new indepth page or expand to show a more indepth stock window.
     - Indepth page would include many more fields of information including a stock chart.
+- Creating a login system so that users may register and save which stocks they would like to display or frequently check.
+    - Possibly allow users to input how many shares they own so that they can more easily track their performance day-to-day.
