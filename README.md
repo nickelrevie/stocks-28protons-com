@@ -14,3 +14,4 @@ Version 2:
 - Implemented templating system for the front end via php.
 - Refactored parts of the backend to be more flexible in accomodating multiple types of stock requests.
 - Stock symbols now appear in the order that the user typed them in in the input box.
+- Changes in the Dow Jones, S&P 500, and the Nasdaq 100 are now displayed on the page.
