@@ -1,5 +1,6 @@
 <html>
 <head>
+    <meta name="viewport" content="width=500px, initial-scale=1, user-scalable=yes">
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
     <link type="text/css" rel="stylesheet" href="page.css"/>
     <title>28Protons: Stock API Project</title>
