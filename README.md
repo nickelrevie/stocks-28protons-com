@@ -2,6 +2,7 @@
 A project where you can use it to pull information on stocks. I will be adding more features over time. I plan to continue to publish the code for this project for the foreseeable future.
 
 Latest version: 2 (www.28protons.com/stocks/v2)
+
 Experimental version: (www.28protons.com/stocks/experimental)
 
 The experimental version is using the "current" folder in the repository. It will always have the most up to date changes, but may be broken or in progress changes and may not be that useable.
