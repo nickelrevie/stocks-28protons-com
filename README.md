@@ -7,6 +7,10 @@ Experimental version: (https://www.28protons.com/stocks/experimental)
 
 The experimental version is using the "current" folder in the repository. It will always have the most up to date changes, but may be broken or in progress changes and may not be that useable.
 
+Version 3 planned features (other potential future plans listed in futureplans.md):
+- Have a database of valid stock symbols that is regularly updated.
+- Ability to eliminate invalid stocks that the user inputs and returns which ones are invalid.
+
 Changelog:
 Version 2:
 - Updated UI
