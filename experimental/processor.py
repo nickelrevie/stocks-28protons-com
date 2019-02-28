@@ -10,10 +10,9 @@ class Processor:
     # Takes in a list of tickers in comma separated format.
     def process(self, ticker, market = False):
 
-        # This is required because the return json from iex has all
-        # of the stock symbols as capitals, so if the tickers aren't
-        # capital as well, then the calls to the json won't work
-        # right.
+        # It magically breaks when this line isn't included and
+        # I'm not going to spend the time to figure out why right
+        # now. The url works without using capitals normally.
         ticker = ticker.upper()
 
         # Initialize the output variable so we can assign it in the

@@ -1,18 +1,18 @@
-<?
+<?php
     $directory = dirname(__FILE__);
     $command = "python3 $directory/interface.py 'marketdata'";
     $result = shell_exec($command);
     // Decode the result
     $marketData = json_decode($result, true);
 ?>
-<? if (!empty($marketData)):?>
+<?php if (!empty($marketData)):?>
     <div class ="stock-market-list">
-        <?
+        <?php
             $marketList = explode(",","DIA,SPY,QQQ");
         ?>
-        <? foreach ($marketList as $marketIndex):?>
+        <?php foreach ($marketList as $marketIndex):?>
         <div class ="stock-market-box">
-            <?
+            <?php
                 $market = "";
                 if ($marketData[$marketIndex]['symbol'] == "DIA")
                 {
@@ -29,6 +29,6 @@
             ?>
             <?=$market?><br><?=$marketData[$marketIndex]['change']?>
         </div>
-        <? endforeach ?>
+        <?php endforeach ?>
     </div>
-<?endif?>
+<?php endif?>

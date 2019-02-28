@@ -1,5 +1,6 @@
 <html>
 <head>
+    <meta name="viewport" content="width=500px, initial-scale=1, user-scalable=yes">
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
     <link type="text/css" rel="stylesheet" href="page.css"/>
     <title>28Protons: Stock API Project</title>
@@ -18,10 +19,10 @@
                 <span style = 'font-size: 11px;'>Get multiple stocks by separating them with commas.</span>
             </form>   
         </div>
-        <?
+        <?php
             include "marketdata.tpl.php";
         ?>
-        <?  
+        <?php
             include "stockresults.tpl.php";
         ?>
     </div>

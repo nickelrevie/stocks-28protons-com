@@ -3,24 +3,17 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-html, body {
-    margin:0; /* remove default margin */
-    padding:0; /* remove default padding */
-    width:100%; /* take full browser width */
-    height:100%; /* take full browser height*/
-}
-
 body
 {
     margin: 0;
     background-color: #f8f8f8;
-    min-width: 500;
 }
 
 h1
 {
-    padding: 5px 0px;
+    padding: 5px 10px;
     margin: auto;
+    width: 800px;
     text-align:center;
 }
 
@@ -30,14 +23,14 @@ h1
     color: #1f1f1f;
     display: block;
     box-shadow: 0px 2px 10px 1px rgb(238,238,238,.2);
-    width:100%
 }
 
 .body-div
 {
-    margin: auto;
     padding: 0px 10px;
-
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
 }
 
 .form-div
@@ -62,7 +55,6 @@ h1
 {
     width: 400px;
     margin: 5 auto;
-    text-align: center;
 }
 
 .stock-market-box
@@ -71,7 +63,7 @@ h1
     border: 3px solid rgb(238,238,238,.5);
     border-radius: 10px;
     padding: 10px;
-    width: 90px;
+    width: 100px;
     margin: 5 auto;
     text-align: center;
     background-color: #fff;

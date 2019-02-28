@@ -1,4 +1,4 @@
-<?
+<?php
 
 // Gets anything supposed to be displayed as a stock and returns it as result data
 if(!empty($_GET['stocks']))
