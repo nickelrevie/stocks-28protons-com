@@ -1,17 +1,21 @@
 # stocks-28protons-com
 A project where you can use it to pull information on stocks. I will be adding more features over time. I plan to continue to publish the code for this project for the foreseeable future.
 
-Latest version: 2 (https://www.28protons.com/stocks/v2)
+Latest version: 2 (http://stocks.28protons.com/)
 
-Experimental version: (https://www.28protons.com/stocks/experimental)
+Experimental version: (http://stocks.28protons.com/experimental)
 
-The experimental version is using the "current" folder in the repository. It will always have the most up to date changes, but may be broken or in progress changes and may not be that useable.
+The experimental version will always have the most up to date changes, but may be broken or in progress changes and may not be that useable.
 
 Version 3 planned features (other potential future plans listed in futureplans.md):
 - Have a database of valid stock symbols that is regularly updated.
 - Ability to eliminate invalid stocks that the user inputs and returns which ones are invalid.
 
 Changelog:
+Version 3: IN DEVELOPMENT
+- Mobile formatting fixes
+- Fixed up UI so that the site no longer looks weird on iOS devices.
+
 Version 2:
 - Updated UI
     - Enjoy a basic light mode UI for the stocks.
