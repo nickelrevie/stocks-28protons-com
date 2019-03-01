@@ -7,6 +7,8 @@ Experimental version: (http://stocks.28protons.com/experimental)
 
 The experimental version will always have the most up to date changes, but may be broken or in progress changes and may not be that useable.
 
+As of the February 28th, 2019, the site is now on stocks.28protons.com, which is a t2.micro EC2 instance running on AWS.
+
 Version 3 planned features (other potential future plans listed in futureplans.md):
 - Have a database of valid stock symbols that is regularly updated.
 - Ability to eliminate invalid stocks that the user inputs and returns which ones are invalid.
@@ -14,7 +16,7 @@ Version 3 planned features (other potential future plans listed in futureplans.m
 Changelog:
 Version 3: IN DEVELOPMENT
 - Mobile formatting fixes
-- Fixed up UI so that the site no longer looks weird on iOS devices.
+- Fixed up css so that the site no longer looks weird on iOS devices.
 
 Version 2:
 - Updated UI
