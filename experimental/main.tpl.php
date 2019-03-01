@@ -1,6 +1,6 @@
 <html>
 <head>
-    <meta name="viewport" content="width=500px, initial-scale=1, user-scalable=yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
     <link type="text/css" rel="stylesheet" href="page.css"/>
     <title>28Protons: Stock API Project</title>
@@ -12,8 +12,7 @@
     <div class = "body-div">
         <div class = "form-div">
             <form method = "get">
-                Enter Stock Symbols: 
-                <input type='text' name='stocks' value='<?=str_replace(' ', '', $_GET['stocks'])?>'>
+                <input type='text' name='stocks' placeholder="Enter stock symbols here" value='<?=str_replace(' ', '', $_GET['stocks'])?>'>
                 <input type='submit' value='Submit'>
                 <br>
                 <span style = 'font-size: 11px;'>Get multiple stocks by separating them with commas.</span>

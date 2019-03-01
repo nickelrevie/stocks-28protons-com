@@ -29,9 +29,12 @@ class DBInterface:
             result = cursor.fetchall()
             print(result)
     
-    def fetchrecord(self, connection, sql):
+    def fetchrecords(self, connection, sql):
         with connection.cursor() as cursor:
-            sql = "select * from `test table`;"
             cursor.execute(sql)
             result = cursor.fetchall()
-            print(result)
+            return result
+    
+    def executesql(self, connection, sql):
+        with connection.cursor() as cursor:
+            cursor.execute(sql)

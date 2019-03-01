@@ -8,5 +8,5 @@ class SymbolValidator:
         pass
 
     # Initiates the process to check whether the input symbols exist
-    def checkSymbols(self):
+    def check_symbols(self):
         pass
