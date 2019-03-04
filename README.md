@@ -12,7 +12,7 @@ Version 3 planned features (other potential future plans listed in futureplans.m
 - Ability to eliminate invalid stocks that the user inputs and returns which ones are invalid.
 
 Changelog:
-Version 3: IN DEVELOPMENT
+Version 3: IN DEVELOPMENT (Below are currently implemented things)
 - Mobile formatting fixes
 - Fixed up UI so that the site no longer looks weird on iOS devices.
 
