@@ -1,4 +1,5 @@
 import urllib.request, json, os, datetime
+from symbolvalidator import SymbolValidator
 
 # Processor class to process the data
 class Processor:
@@ -18,6 +19,10 @@ class Processor:
         # Initialize the output variable so we can assign it in the
         # with statement.
         output = ""
+
+        if market == False:
+            validator = SymbolValidator()
+            
 
         # Nab the json file from the online api and assign it to the
         # output variable.
