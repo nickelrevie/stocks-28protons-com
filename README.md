@@ -9,14 +9,13 @@ The experimental version will always have the most up to date changes, but may b
 
 As of the February 28th, 2019, the site is now on stocks.28protons.com, which is a t2.micro EC2 instance running on AWS.
 
-Version 3 planned features (other potential future plans listed in futureplans.md):
-- Have a database of valid stock symbols that is regularly updated.
-- Ability to eliminate invalid stocks that the user inputs and returns which ones are invalid.
-
 Changelog:
-Version 3: IN DEVELOPMENT (Below are currently implemented things)
+Version 3:
 - Mobile formatting fixes
 - Fixed up css so that the site no longer looks weird on iOS devices.
+- Symbol Updater now runs and grabs the valid symbols each day.
+- Symbol validator runs whenever the user inputs stock symbols into the input field.
+- The validator will check the database of valid symbols and only display ones that are valid instead of asking the api for invalid stocks, which would then unintentionally return no results.
 
 Version 2:
 - Updated UI

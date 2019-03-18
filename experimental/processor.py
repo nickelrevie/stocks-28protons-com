@@ -10,6 +10,9 @@ class Processor:
 
     # Takes in a list of tickers in comma separated format.
     def process(self, ticker, market = False):
+        if market == False:
+            validator = SymbolValidator()
+            ticker = validator.check_symbols(ticker)
 
         # It magically breaks when this line isn't included and
         # I'm not going to spend the time to figure out why right
@@ -19,10 +22,6 @@ class Processor:
         # Initialize the output variable so we can assign it in the
         # with statement.
         output = ""
-
-        if market == False:
-            validator = SymbolValidator()
-            
 
         # Nab the json file from the online api and assign it to the
         # output variable.

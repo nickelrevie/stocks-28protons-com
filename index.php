@@ -1,4 +1,4 @@
 <?php
-$currentversion = '2';
+$currentversion = '3';
 header('Location: /v' . $currentversion);
 ?>

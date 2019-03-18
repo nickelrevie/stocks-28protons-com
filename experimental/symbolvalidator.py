@@ -13,12 +13,13 @@ class SymbolValidator:
         interface.connect()
         return interface
 
-    # Initiates the process to check whether the input symbols exist
+    # Checks whether the input symbols exist and returns existing ones
     def check_symbols(self,symbols):
         good_symbols = []
-        input = symbols.split(',')
+        input = symbols.split(",")
         for symbol in input:
-            sql = "select symbol from symbol_list where symbol = '" + symbol + "';"
-            if self.interface.fetch_records(sql) != []:
+            sql = "select symbol from symbol_list where symbol = '" + symbol.upper() + "';"
+            result = self.interface.fetch_records(sql)
+            if result != []:
                 good_symbols.append(symbol)
-
+        return ','.join(good_symbols)

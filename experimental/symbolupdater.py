@@ -17,8 +17,8 @@ class SymbolUpdater:
         interface.connect()
         return interface
 
-    # Gets the symbols in JSON Format, converts it into a csv StringIO
-    # object and then returns it.
+    # Gets the symbols in JSON Format, then grabs each entry and
+    # inserts it into the temp table.
     def get_new_symbols(self):
         with urllib.request.urlopen("https://api.iextrading.com/"
             + "1.0/ref-data/symbols") as url:
@@ -44,19 +44,12 @@ class SymbolUpdater:
         sql = "CREATE TEMPORARY TABLE temp_symbol_list (symbol text, name text, date text, isEnabled text, type text, iexId int);"
         self.interface.execute_sql(sql)
 
-        #self.interface.copy_records("temp_symbol_list", symbols)
-        #sql = "insert into temp_symbol_list VALUES ('YETI','YETI Holdings Inc.','2019-03-14','True','cs','11574');"
-        #self.interface.execute_sql(sql)
         self.get_new_symbols()
-
-        sql = 'select * from temp_symbol_list;'
-        result = self.interface.fetch_records(sql)
-        print(result)
 
         sql = 'insert into symbol_list select * from temp_symbol_list where iexId not in (select "iexId" from symbol_list);'
         self.interface.execute_sql(sql)
 
-        sql = 'update symbol_list a set symbol = b.symbol, name = b.name, date = b.date, "isEnabled" = b.isenabled, type = b.type, "iexId" = b.iexid from temp_symbol_list b where b.date != a.date;'
+        sql = 'update symbol_list a set symbol = b.symbol, name = b.name, date = b.date, "isEnabled" = b.isenabled, type = b.type, "iexId" = b.iexid from temp_symbol_list b where b.date != a.date and a."iexId" = b.iexId;'
         self.interface.execute_sql(sql)
 
         self.interface.commit_and_close_connection()
