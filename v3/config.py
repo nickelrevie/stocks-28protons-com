@@ -1,0 +1,8 @@
+host = "stocks-28protons-com.c2inbvqw0fzk.us-west-1.rds.amazonaws.com"
+user = "app_28p"
+password = "-A@v@c5QHuHy$9gV"
+dbname = "app_28p"
+#host = "mysql.28protons.com"
+#user = "28p_app"
+#password = "Eu^3DtGeBajW5w#^"
+#db = "stocks_app"
