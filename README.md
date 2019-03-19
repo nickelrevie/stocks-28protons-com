@@ -1,7 +1,7 @@
 # stocks-28protons-com
 A project where you can use it to pull information on stocks. I will be adding more features over time. I plan to continue to publish the code for this project for the foreseeable future.
 
-Latest version: 2 (http://stocks.28protons.com/)
+Latest version: 3 (http://stocks.28protons.com/)
 
 Experimental version: (http://stocks.28protons.com/experimental)
 
