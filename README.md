@@ -1,6 +1,8 @@
 # stocks-28protons-com
 A project where you can use it to pull information on stocks. I will be adding more features over time. I plan to continue to publish the code for this project for the foreseeable future.
 
+UPDATE: The API I use to pull stock data has been deprecated. I will take this time to likely rewrite a new website.
+
 Latest version: 3 (http://stocks.28protons.com/)
 
 Experimental version: (http://stocks.28protons.com/experimental)
