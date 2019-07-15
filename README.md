@@ -1,17 +1,15 @@
 # stocks-28protons-com
 A project where you can use it to pull information on stocks. I will be adding more features over time. I plan to continue to publish the code for this project for the foreseeable future.
 
-UPDATE: The API I use to pull stock data has been deprecated. I will take this time to likely rewrite a new website.
 
-Latest version: 3 (http://stocks.28protons.com/)
-
-Experimental version: (http://stocks.28protons.com/experimental)
-
-The experimental version will always have the most up to date changes, but may be broken or in progress changes and may not be that useable.
+Latest version: 3.1 (http://stocks.28protons.com/)
 
 As of the February 28th, 2019, the site is now on stocks.28protons.com, which is a t2.micro EC2 instance running on AWS.
 
 Changelog:
+Version 3.1:
+- Updated to use the new IEX api.
+
 Version 3:
 - Mobile formatting fixes
 - Fixed up css so that the site no longer looks weird on iOS devices.
