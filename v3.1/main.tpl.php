@@ -25,6 +25,12 @@
             include "stockresults.tpl.php";
         ?>
     </div>
-    <div class="footer"><span style = 'font-size: 12px;'><a href="https://iexcloud.io">Data provided by IEX Cloud</a></span></div>
+    <div class="footer">
+        <p>
+            <span style = 'font-size: 12px;'><a href="https://github.com/nickelrevie/stocks-28protons-com">Source Code</a></span>
+            <br>
+            <span style = 'font-size: 12px;'><a href="https://iexcloud.io">Data provided by IEX Cloud</a></span>
+        </p>
+    </div>
 </body>
 </html>
