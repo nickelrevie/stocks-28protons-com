@@ -46,7 +46,7 @@ class SymbolUpdater:
     # delete old records if they're out of date by more than
     # a few days.
     def update_table(self, interface):
-        sql = "CREATE TEMPORARY TABLE temp_symbol_list (symbol text, date text, isEnabled text);"
+        sql = "CREATE TEMPORARY TABLE temp_symbol_list (symbol varchar(10), date date, isenabled varchar(5));"
         self.interface.execute_sql(sql)
 
         self.get_new_symbols()
@@ -54,7 +54,7 @@ class SymbolUpdater:
         sql = 'insert into symbol_list select * from temp_symbol_list where symbol not in (select symbol from symbol_list);'
         self.interface.execute_sql(sql)
 
-        sql = 'update symbol_list a set symbol = b.symbol, date = b.date, "isEnabled" = b.isenabled, from temp_symbol_list b where b.date != a.date and a.symbol = b.symbol;'
+        sql = 'update symbol_list a set symbol = b.symbol, date = b.date, isenabled = b.isenabled, from temp_symbol_list b where b.date != a.date and a.symbol = b.symbol;'
         self.interface.execute_sql(sql)
 
         self.interface.commit_and_close_connection()
