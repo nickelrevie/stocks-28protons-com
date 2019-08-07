@@ -16,7 +16,6 @@ class DBInterface:
         self.connection = self.connect()
 
     def connect(self):
-                      + user + "' password='" + password + "' connect_timeout=30")
         connection = pymysql.connect(host=host,
                                      user=user,
                                      password=password,
