@@ -3,3 +3,5 @@ experimental/config.py
 v3/config.py
 v3.1/config.py
 v3.1/api.py
+v3.2/config.py
+v3.2/api.py

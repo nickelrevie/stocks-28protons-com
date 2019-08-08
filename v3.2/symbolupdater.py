@@ -29,11 +29,11 @@ class SymbolUpdater:
         website = 'https://cloud.iexapis.com/stable'
         iex_symbols = '/ref-data/iex/symbols'
         with urllib.request.urlopen(website + iex_symbols
-                                    + public_api_token) as url:
+                                    + "?token=" + public_api_token) as url:
             data = json.loads(url.read().decode())
 
         for entry in data:
-            entry['name'].replace("'", "''")
+            #entry['name'].replace("'", "''")
             string = ("'" + str(entry['symbol'])
                       + "','" + str(entry['date'])
                       + "','" + str(entry['isEnabled']) + "'"
@@ -46,7 +46,7 @@ class SymbolUpdater:
     # delete old records if they're out of date by more than
     # a few days.
     def update_table(self, interface):
-        sql = "CREATE TEMPORARY TABLE temp_symbol_list (symbol text, date text, isEnabled text);"
+        sql = "CREATE TEMPORARY TABLE temp_symbol_list (symbol varchar(10), date date, isenabled varchar(5));"
         self.interface.execute_sql(sql)
 
         self.get_new_symbols()
@@ -54,7 +54,7 @@ class SymbolUpdater:
         sql = 'insert into symbol_list select * from temp_symbol_list where symbol not in (select symbol from symbol_list);'
         self.interface.execute_sql(sql)
 
-        sql = 'update symbol_list a set symbol = b.symbol, date = b.date, "isEnabled" = b.isenabled, from temp_symbol_list b where b.date != a.date and a.symbol = b.symbol;'
+        sql = 'update symbol_list a inner join temp_symbol_list b on a.symbol = b.symbol set a.symbol = b.symbol, a.date = b.date, a.isenabled = b.isenabled where a.date != b.date;'
         self.interface.execute_sql(sql)
 
         self.interface.commit_and_close_connection()
