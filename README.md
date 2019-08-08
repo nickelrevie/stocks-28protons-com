@@ -2,7 +2,7 @@
 A project where you can use it to pull information on stocks. I will be adding more features over time. I plan to continue to publish the code for this project for the foreseeable future.
 
 
-Latest version: 3.1 (http://stocks.28protons.com/)
+Latest version: 3.2 (https://stocks.28protons.com/)
 
 Due to the new IEX API, versions older than 3.1 no longer work and I do not plan on modifying the code to make them work at the moment.
 
