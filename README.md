@@ -6,9 +6,13 @@ Latest version: 3.1 (http://stocks.28protons.com/)
 
 Due to the new IEX API, versions older than 3.1 no longer work and I do not plan on modifying the code to make them work at the moment.
 
-As of the February 28th, 2019, the site is now on stocks.28protons.com, which is a t2.micro EC2 instance running on AWS.
-
 Changelog:
+Version 3.2
+- Moved the website to a different server not on aws or amazon rds since it cost more than my shared webserver.
+- Adapted the DBInterface class to utilize mysql using PyMySQL instead of postgres.
+- Removed ability to see after hours information because the IEX api doesn't supply it by default any longer.
+- Some other minor changes to accomodate the move to the new server.
+
 Version 3.1:
 - Updated to use the new IEX api.
 
